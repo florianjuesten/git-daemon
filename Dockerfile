@@ -1,8 +1,10 @@
-FROM alpine:3.5
+FROM raspbian/jessie
 
 ENV VERSION 1.0
 
-RUN apk add --no-cache git-daemon 
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y git
 
 ADD git-daemon.sh /usr/local/bin/git-daemon.sh
 VOLUME /git
