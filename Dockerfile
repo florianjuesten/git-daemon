@@ -1,4 +1,4 @@
-FROM raspbian/jessie
+FROM raspbian/stretch
 
 ENV VERSION 1.0
 
